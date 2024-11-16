@@ -1,0 +1,370 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* changes the box model so that padding and border are included in the 
+    element's total width and height, making it easier to manage layout sizes*/
+    font-family: Outfit;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #dadadd; /* light grey*/
+}
+
+a {
+    text-decoration: none; /*removes underlines from all elements that have links */
+    color: inherit; /*inherits color from parent so they are all the same, e.g. a tag within nav in html body, so it will inherit nav color's*/
+}
+
+
+nav {
+    display: flex; /*provides more propertities unlike block and in-line block*/
+    align-items: center; /*alligns all elements within nav bar horizontally */
+    justify-content: space-between; /* creates space between each elements within the nav bar horizontally */
+    background: #131921;
+    padding:10px 20px;
+    color: #fff;
+}
+
+.nav-country {
+    display: flex; /* allows location icon to be moved to the left near the text */
+    align-items: end; /*moves location logo next to country's name */
+    margin-left: 15px;
+    font-size: 13px;
+    color:#c4c4c4;
+
+}
+
+.nav-country h1 { /*country's text */
+    color: #fff; /*changes color of country text*/
+    font-size: 14px; /* change text size of country text*/
+}
+
+.nav-search { /*entire search bar including texts and icons */
+    flex: 1; /*This allows the .nav-search element to grow and take up available space in a flex container.
+     It tells the flex item to take up the remaining space in the flex container, sharing it with other flex items if necessary.*/
+    display: flex;
+    align-items: center;
+    background: #fff;
+    color: gray;
+    max-width: 1000px; /* Limits the width of the .nav-search element to a maximum of 1000 pixels. 
+    Even if the parent container is wider, the .nav-search element will not exceed this width.*/
+    border-radius: 4px;
+    margin-left: 15px;
+}
+
+
+.nav-search-category { /* dropdown icon "arrow" and its text "All" */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 5px;
+    background: #e5e5e5;
+}
+
+
+.nav-search-input {  /*search input box it self*/
+    border:none; 
+    outline:none;
+    padding-left:20px; /*20 px of space on the left */
+    width: 100% /*fills every space available within its area by 100% horizontally*/
+}
+
+.nav-search-icon {
+    max-width: 41px;
+    padding: 8px; /*padding 8 on all sides, top, left, right, bottom*/
+    background: #ffd65f; /*color yellow for search icon */
+    border-radius: 0 4px 4px 0; /* border radius left and right are 4px*/
+}
+
+.nav-language {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.nav-sign-in {
+    margin-left: 15px;
+}
+
+.nav-sign-in p {
+    font-size: 10px;
+}
+
+.nav-sign-in h1 {
+    font-size:14px;
+}
+
+.nav-signin-drop {
+    margin-left: 3px;
+}
+
+.nav-cart {
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+}
+
+.nav-cart h1 {
+    font-size: 14px;
+}
+
+.nav-bottom {
+    display: flex;
+    background: #232f3E;
+    align-items: center;
+    gap:20px;
+    padding: 8px 20px;
+    color: white;
+    font-size: 15px;
+}
+
+.nav-bottom div {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* gives spaces between flex items*/
+}
+
+.header-slider ul {
+    display: flex; /*since the imgs are within a ul tag, by having flex, the imgs
+    are shown horizontally and be accessed by scrolling your mouse wheel*/
+    overflow-y: hidden; /* If any part of the images tries to stick out above the top of the ul, 
+    overflow-y: hidden; hides those parts, keeping everything neat and within the bounds of the ul. */
+}
+
+.header-img {
+    max-width: 100%; /*makes img size be always within the size of the header and not overflow*/
+    mask-image: linear-gradient(to bottom, #000000 50%, transparent 100%); /* #000000 50% makes top half of img darker, while transparent 100% 
+    makes bottom half transparent, "to bottom" specifies that the transition is from top to bottom*/
+}
+
+.header-slider a {
+    position: absolute;
+    top: 20%;
+    z-index: 1; /* takes priority over other elements */
+    padding: 5vh 1vw; /* adds padding inside the element */
+    background: #ffffff4f; /* box color is semi-transparent white */
+    color: #0000007b; /* text color is semi-transparent black */
+    text-decoration: none; /* no underline on text */
+    font-weight: 600; /* bold text with weight of 600 */
+    font-size: 18px; /* font size is 18 pixels */
+    cursor: pointer; /* cursor changes to a pointer when hovered */
+}
+
+.control-next {
+    right: 0; /*moves the arrow all the way to the right*/
+}
+
+
+.box-row {
+    display: flex;
+    flex-wrap: wrap; /* makes all the boxes cant fit the screen in one line, another row will be added and the new boxes can go there*/
+    row-gap: 20px;           /* Creates vertical space (gap) between rows of flex items */
+    justify-content: space-between; /* Distributes flex items along the main axis (horizontally in this case), with space between them */
+    margin: 20px 30px;       /* Sets margin around the container, 20px at the top and bottom, 30px on the left and right */
+}
+
+
+.box-col {
+    display: flex;           /* Makes each .box-col element a flex container */
+    flex-direction: column;  /* Arranges flex items in a column layout (one on top of the other) */
+    gap: 10px;               /* Adds vertical space (gap) between direct child elements (flex items) */
+    padding: 15px 20px;      /* Sets padding inside each .box-col element, 15px on top and bottom, 20px on left and right */
+    background: #fff;        /* Sets the background color of each .box-col element to white */
+    max-width: 24%;          /* Sets the maximum width each .box-col element can occupy, as a percentage of its container */
+    min-height: 200px;       /* Sets the minimum height each .box-col element should have, ensuring they are not too small */ 
+    z-index: 1;
+}
+
+.box-col a {
+    font-size: 13px;
+    color: #009999;
+    font-weight: 500;
+}
+
+.header-box {
+    margin-top: -20vw;
+}
+
+
+.product-slider {
+    background: #fff;
+    margin: 0 30px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.product-slider .products {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.product-slider .products img {
+    max-width: 200px;
+    max-height: 200;
+}
+
+.product-slider .products::-webkit-scrollbar {
+    display: none;
+}
+
+.product-slider-with-price {
+    background: #fff;
+    margin: 0 30px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.product-slider-with-price .products {
+    display: flex;
+    overflow-x: auto;
+    gap:10px;
+    margin-top: 10px;;
+}
+
+.product-slider-with-price .products::-webkit-scrollbar { /*hides horizotnal scrollbar*/
+    display: none;
+}
+
+.products-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-width: 210px;
+    background: #fbfbfb;
+}
+
+.products-card img {
+    width: 110px;
+    margin: 0 50px;
+}
+
+.product-offer p{ /*the "27% off*/
+    background: #be0b3b;
+    color:#fff;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 2px;
+    margin: 8px 0;
+    font-size: 13px
+}
+
+.product-offer span{ /*the "deal" in "27% off deal"*/
+    color: #be0b3b;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.product-price {
+    color: gray;
+    font-size: 13px;
+}
+
+.product-card h4 {
+    color: #525252;
+    font-size: 15px;
+    font-weight: 400px;
+}
+
+.footer-scroll-top {
+    padding: 1rem;
+    background-color: #37475A;
+    display: grid;
+}
+
+.footer-scroll-top button {
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: #fff;
+}
+
+.footer-scroll-top:hover {
+    opacity: 0.95;
+}
+
+.footer-reference {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #232F3E;
+    color: white;
+    gap: 20px
+}
+
+.footer-reference a {
+    color: #DDD;
+}
+
+.footer-refernce-link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+
+.footer-refernce-link a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px solid #3a4553;
+}
+
+.footer-logo-language {
+    display: flex;
+    padding: 20px;
+    background:#232F3E;
+    justify-content: center;
+    gap: 20px;
+}
+
+.country-selector {
+    display: flex;
+    gap: 10px;
+    padding:5px 25px 5px 5px;
+    align-items: center;
+    border: 1px solid #CCC;;
+    border-radius: 5%;
+    background:#232F3E;
+}
+
+.country-selector p {
+    color: #CCC;;
+}
+.country-selector img {
+    padding: 1px;
+    border: 1px solid #CCC;;
+}
+
+.footer-affiliates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #131A22;
+    color: white;
+    font-size: 12px;
+}
+
+.footer-affiliates div {
+    display: flex;
+    gap: 20px;
+}
+
+
+@media screen {
+    
+}
