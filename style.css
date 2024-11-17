@@ -32,12 +32,25 @@ nav {
     color: #fff;
 }
 
+
+#amazon-logo-top:hover {
+    outline: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+}
 .nav-country {
     display: flex; /* allows location icon to be moved to the left near the text */
     align-items: end; /*moves location logo next to country's name */
     margin-left: 15px;
     font-size: 13px;
     color:#c4c4c4;
+
+}
+
+.nav-country:hover {
+    outline: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
 
 }
 
@@ -91,8 +104,95 @@ nav {
     margin-left: 15px;
 }
 
+.nav-language:hover {
+    outline: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+
 .nav-sign-in {
     margin-left: 15px;
+    position: relative;
+}
+
+.nav-sign-in:hover {
+    outline: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+
+.drop-down-sign-in-panel {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Below the button */
+    background-color: white;
+    width: 250px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    outline: 1px solid rgb(168, 167, 167);
+    z-index: 10;
+    
+}
+
+.nav-sign-in:hover .drop-down-sign-in-panel {
+    display: block;
+}
+
+/* .sign-in-option-one a {
+    color: inherit;
+} */
+.sign-in-option-one {
+    display: flex;
+    background-color: #FFD814;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #000000;
+    text-decoration: none;
+    margin-bottom: 20px;
+    /* box-shadow: #000000; */
+}
+
+.sign-in-option-one:hover {
+    text-decoration: underline;
+}
+.panel-contents {
+    display: flex;
+}
+/* Styling for links and text inside the dropdown */
+.drop-down-sign-in-panel a {
+    display: block; /* Ensure links are stacked vertically */
+    margin: 10px 0; /* Add spacing between links */
+    text-decoration: none;
+    color: #000000; /* Amazon-like link color */
+    font-size: 14px;
+}
+
+.sign-in-alt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -25px;
+}
+
+.sign-in-alt p, a{
+    display: block;
+    color: #000000;
+    font-size: 10px;
+
+}
+
+.sign-in-alt a {
+    text-decoration: none;
+    font-size: 10px;
 }
 
 .nav-sign-in p {
@@ -111,6 +211,13 @@ nav {
     display: flex;
     align-items: center;
     margin: 0px 15px;
+}
+
+.nav-cart:hover {
+    outline: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+
 }
 
 .nav-cart h1 {
