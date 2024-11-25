@@ -33,6 +33,10 @@ nav {
 }
 
 
+hr {
+    border: 1px solid #3a4553;
+}
+
 #amazon-logo-top:hover {
     outline: 1px solid white;
     border-radius: 2px;
@@ -114,6 +118,7 @@ nav {
 .nav-sign-in {
     margin-left: 15px;
     position: relative;
+    
 }
 
 .nav-sign-in:hover {
@@ -129,12 +134,14 @@ nav {
     position: absolute;
     top: 100%; /* Below the button */
     background-color: white;
-    width: 250px;
+    right: -150px;
+    width: 500px;
     height: 400px;
     padding: 20px;
     border-radius: 5px;
     outline: 1px solid rgb(168, 167, 167);
-    z-index: 10;
+    z-index: 10; /*makes box appear over any other feature*/
+    white-space: nowrap; /*prevents text being isnide one another*/
     
 }
 
@@ -142,30 +149,36 @@ nav {
     display: block;
 }
 
+/* .drop-down-sign-in-panel hr {
+    border: 1px solid #3a4553;
+} */
 /* .sign-in-option-one a {
     color: inherit;
 } */
 .sign-in-option-one {
-    display: flex;
+    display: relative;
     background-color: #FFD814;
     height: 30px;
-    width: 200px;
+    width: 250px;
+    margin-left: 100px;
     border-radius: 5px;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: center; 
     color: #000000;
     text-decoration: none;
     margin-bottom: 20px;
     /* box-shadow: #000000; */
 }
 
+.sign-in-option-one a {
+    padding-top: 2%;
+}
+
 .sign-in-option-one:hover {
     text-decoration: underline;
 }
-.panel-contents {
-    display: flex;
-}
+
 /* Styling for links and text inside the dropdown */
 .drop-down-sign-in-panel a {
     display: block; /* Ensure links are stacked vertically */
@@ -179,11 +192,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 2px;
     margin-top: -25px;
 }
 
-.sign-in-alt p, a{
+.sign-in-alt p{
     display: block;
     color: #000000;
     font-size: 10px;
@@ -191,7 +204,8 @@ nav {
 }
 
 .sign-in-alt a {
-    text-decoration: none;
+    text-decoration: underline;
+    color:#05a;
     font-size: 10px;
 }
 
@@ -207,6 +221,46 @@ nav {
     margin-left: 3px;
 }
 
+.panel-contents {
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    height: 100%;
+    overflow: hidden;
+    color: #000000;
+}
+
+.list-items, .list-items-two {
+    margin-top: 20px;
+}
+.list-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.list-options a {
+    color: grey;
+    font-size: 12px;
+    line-height: 0.05;
+}
+
+.list-items, .list-items-two {
+    flex:1;
+}
+
+
+.vertical-line {
+    border: 0.1px solid rgb(235, 231, 231);
+    margin-top: 10px;
+    height: 300px;
+}
+
+.horizontal-line {
+    border: 0.1px solid rgb(235, 231, 231);
+    width: 100%;
+    margin-top: 10px;
+}
 .nav-cart {
     display: flex;
     align-items: center;
@@ -426,10 +480,6 @@ nav {
     text-decoration: underline;
 }
 
-hr {
-    border: 1px solid #3a4553;
-}
-
 .footer-logo-language {
     display: flex;
     padding: 20px;
@@ -471,6 +521,27 @@ hr {
     gap: 20px;
 }
 
+.body {
+    background-color: rgb(182, 181, 181);
+    height: 100vh;
+}
+
+.amazon-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.sign-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20 100 20 100;
+    border-radius: 100px;
+
+}
 
 @media screen {
     
